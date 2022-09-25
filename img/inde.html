@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Taschenrechner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <script>
+
+function appendOperation (operation) {
+document.getElementById('resultArea').innerHTML += operation;
+}
+
+function calculateResult() {
+let container = document.getElementById('resultArea');
+let result =eval(container.innerHTML);
+container.innerHTML = result;
+
+}
+function deleteLast() {
+    let container = document.getElementById('resultArea');
+    if(container.innerHTML.endsWith(' ')) {
+       container.innerHTML = container.innerHTML.slice(0, -3)
+    
+  } else{
+       container.innerHTML = container.innerHTML.slice(0,-1)
+   }
+}
+
+
+
+    </script>
+
+</head>
+<body>
+    
+    
+   
+
+    
+
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td onclick="deleteLast()" id="yousef">DEL</td>
+
+        </tr>
+
+
+        <tr>
+            <td onclick="appendOperation(7)">7</td>
+            <td onclick="appendOperation(8)">8</td>
+            <td onclick="appendOperation(9)">9</td>
+            <td onclick="calculateResult()"id="yousef">=</td>
+
+        </tr>
+        <tr>
+            <td onclick="appendOperation(4)">4</td>
+            <td onclick="appendOperation(5)">5</td>
+            <td onclick="appendOperation(6)">6</td>
+            <td onclick="appendOperation(' - ')"id="yousef">-</td>
+            
+
+        </tr>
+        <tr>
+            <td onclick="appendOperation(1)">1</td>
+            <td onclick="appendOperation(2)">2</td>
+            <td onclick="appendOperation(3)">3</td>
+            <td onclick="appendOperation(' * ')"id="yousef">x</td>
+
+        </tr>
+        <tr>
+            <td onclick="appendOperation( 8)">0</td>
+            <td onclick="appendOperation(' / ')"id="yousef">/</td>
+            <td onclick="appendOperation(' . ')" id="yousef">,</td>
+            <td onclick="appendOperation(' + ')"id="yousef">+</td>
+            
+            
+        </tr>
+        <div id="resultArea">
+            
+        </div>
+        
+</body>
+</html>

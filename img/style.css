@@ -1,0 +1,45 @@
+
+        
+
+        body{
+            margin: 0;
+        }
+
+        table {
+            height: 20vh;
+            width: 100%;
+            font-size: 24px;
+            background-color: rgb(30, 30, 30);
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+
+        }
+        td{
+            width: 11%;
+          height: 15vh;
+          background-color: rgb(20, 20, 20);
+            
+            
+        }
+        #yousef{
+            background-color: rgb(8, 93, 163);
+        }
+             
+        td:hover{
+            cursor: pointer;
+        }
+
+        #resultArea {
+            height: 30vh;
+            background-color: rgb(40, 40, 40);
+            color: white;
+            font-size: 64px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-family: sans-serif;
+            box-sizing: border-box;
+            
+        }
+
